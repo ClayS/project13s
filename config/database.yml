@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: project13
+  username: postgres
+  password: postgres
+  encoding: unicode
+  
+  
