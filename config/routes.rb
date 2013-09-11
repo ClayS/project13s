@@ -1,5 +1,5 @@
 Project13::Application.routes.draw do
-  get "main/home"
+   #get "main/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,4 +54,14 @@ Project13::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  get "/"            => "main#home"
+  get "/sign_in"     => "main#sign_in" 
+  
+  
+  
+  
+  
 end
+
+
