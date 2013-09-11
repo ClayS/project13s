@@ -60,7 +60,9 @@ Project13::Application.routes.draw do
   get "/sign_up"        => "main#sign_up"
   get "/about"          => "main#about"
   get "/contact_us"     => "main#contact_us"
+  get "/location"       => "main#location"
   
+  get "/admin"          => "admin#home"
   
   
   
