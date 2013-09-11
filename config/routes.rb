@@ -55,8 +55,11 @@ Project13::Application.routes.draw do
   #     resources :products
   #   end
   
-  get "/"            => "main#home"
-  get "/sign_in"     => "main#sign_in" 
+  get "/"               => "main#home"
+  get "/sign_in"        => "main#sign_in" 
+  get "/sign_up"        => "main#sign_up"
+  get "/about"          => "main#about"
+  get "/contact_us"     => "main#contact_us"
   
   
   
