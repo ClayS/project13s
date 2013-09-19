@@ -7,16 +7,19 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-    <center><h1>
-      <a href="/"><button type="Home">Home</button></a>
-      <a href="/sign_in"><button type="button">Sign In</button></a>
-      <a href="/about"><button type="button">About</button></a>
-      <a href="/contact_us"><button type="button">Contact us!</button></a>
-      <a href="/admin/sign_in"><button type="Home">Admin</button></a>
-       <%== form_tag "/sign_out" do %>
-       <button type="Sign Out">Sign Out</button>
-     </h1> 
-    <% end %></center>
+    <nav>
+      <ul>
+        <li><a href="/"><button type="Home">Home</button></a>
+        <li><a href="/sign_in"><button type="button">Sign In</button></a>
+        <li><a href="/about"><button type="button">About</button></a>
+        <li><a href="/contact_us"><button type="button">Contact Us!</button></a>
+        <li><a href="/admin/sign_in"><button type="Home">Admin</button></a>
+        <li><%== form_tag "/sign_out" do %>
+              <button type="Sign Out">Sign Out</button>
+            <% end %>
+      </ul>
+    </nav>
+    <br>
     <%= yield %>
     
     <br>

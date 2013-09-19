@@ -9,11 +9,14 @@ class MainController < ApplicationController
   end
   
   def contact_us_post
-     redirect_to "/thank_you"
-  end
-    
-  
-  
-
-  
+    @inquiry = Inquiry.new
+    @inquiry.name = params[:name]
+    @inquiry.email = params[:email]
+    @inquiry.body = params[:body]
+    if @inquiry.save
+      redirect_to "/thank_you"
+    else  
+     render :contact_us
+    end
+  end  
 end

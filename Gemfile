@@ -56,5 +56,6 @@ gem 'rails-footnotes',
 gem 'rails_12factor' #serve production assets
 
 gem 'bootstrap-sass'
+gem 'pony'
 
 
