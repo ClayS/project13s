@@ -2,13 +2,15 @@
       <%= flash[:error] %>
       <% end %>
 </div>
+
+<h2><center><font color="light blue">SIGN IN</font></center></h2>
  
 <%== form_tag "/sign_in_post" do %>
 <p align="left">
-<h4>Email Address: 
-  <%== text_field_tag :email %> </h4>
+<h4><font color="">Email Address: </font>
+  <%== text_field_tag :email, "", size: 50 %> </h4>
 <br>
-<h4>Password: 
+<h4><font color="">Password: </font>
   <%== password_field_tag :password %></h4>
 <br> 
 </p>
@@ -18,5 +20,5 @@
 <% end %>
  
 
-<p>Don't have an account with us? Click <a href="/sign_up">here</a> to sign up!</p>
+<p><h3>Don't have an account with us? Click <a href="/sign_up"><font color="green"> here </font></a> to sign up!</h3></p>
 

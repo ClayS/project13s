@@ -17,7 +17,7 @@ class VolunteerController < ApplicationController
   
   def sign_out_post
     session.clear
-    redirect_to "/sign_in"
+    redirect_to "/thank_you"
   end
   
   def sign_up

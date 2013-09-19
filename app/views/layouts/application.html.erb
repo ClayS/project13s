@@ -12,11 +12,11 @@
       <a href="/sign_in"><button type="button">Sign In</button></a>
       <a href="/about"><button type="button">About</button></a>
       <a href="/contact_us"><button type="button">Contact us!</button></a>
-      <a href="/admin"><button type="Home">Admin</button></a>
-       
-    <%== form_tag "/sign_out" do %><button type="Sign Out">Sign Out</button>
-     </h1></center>
-    <% end %>
+      <a href="/admin/sign_in"><button type="Home">Admin</button></a>
+       <%== form_tag "/sign_out" do %>
+       <button type="Sign Out">Sign Out</button>
+     </h1> 
+    <% end %></center>
     <%= yield %>
     
     <br>
@@ -32,7 +32,7 @@
     
     
     
-    <p> <h6>Almost home transports</h6> </p>
+    
 
     </body>
 </html>

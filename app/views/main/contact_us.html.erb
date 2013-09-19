@@ -1,8 +1,15 @@
+ 
+<center><h2><font color="orange">CONTACT US</font></h2></center>
+
+
+
 <%== form_tag "/contact_us_post" do %>
+ Name 
+<%== text_field_tag :Name, "", size: 60 %><br>
+email address 
+<%== text_field_tag :Name, "", size: 60 %><br>
 
-
-
-
-<h1>Name</h1>
-<%== text_field_tag :Name %>
-<% end %>
+<%== text_area_tag :body, "", rows: 8, cols: 80%>
+ <br>
+<%== submit_tag "send" %>
+ <% end %>
