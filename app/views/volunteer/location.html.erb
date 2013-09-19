@@ -1,0 +1,20 @@
+<center><h1> Tell us Where you are, and where you are going </h1><br>
+<h3> We will check to see if a pet in need needs a ride to your destination</h3>
+</center>
+
+<%== form_tag "/location_post" do %>
+
+<p><h1> Where are you?  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Where are you going? </h1></p>
+
+<p><%== text_field_tag :location, "City" %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<%== text_field_tag :location, "City" %><br> 
+<%== text_field_tag :location, "State" %>
+<%== text_field_tag :location, "State" %></p>
+
+ 
+
+
+<% end %>
+
+

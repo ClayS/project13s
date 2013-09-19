@@ -1,0 +1,19 @@
+<h1>SIGN UP FOR NEW ACCOUNT</h1><br>
+<div style="color:red"><% if @volunteer != nil %>
+        <% @volunteer.errors.full_messages.each do |m| %>
+        <%== m %>
+        <br>
+        <% end %>
+     <% end %>
+</div>
+<%== form_tag("/sign_up_post") do %>
+  <h4>First name<%== text_field_tag :first_name, "", size: 30 %></h4>
+  <h4>Last name<%== text_field_tag :last_name, "", size: 30 %></h4>
+  <h4>Email     <%== text_field_tag :email, "", size: 30 %></h4>
+  <h4>Password<%== password_field_tag :password, "", size: 30 %></h4>
+  <h4>Re-enter password<%== password_field_tag :password_confirmation, "", size: 30 %></h4>
+  <h4>City<%== text_field_tag :city, "", size: 30 %></h4>
+  <h4>State<%== text_field_tag :state, "", size: 30 %></h4>
+  <h4>Rescue affiliation<%== text_field_tag :affiliation, "", size: 30 %></h4>
+  <%== submit_tag "Sign Up!" %>
+<% end %>

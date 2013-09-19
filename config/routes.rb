@@ -1,72 +1,19 @@
 Project13::Application.routes.draw do
-   #get "main/home"
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+  get   "/"                 => "main#home"
+  get   "/about"            => "main#about"
+  get   "/contact_us"       => "main#contact_us"
+  post  "/contact_us_post"  => "main#contact_us_post"
+   
+     
   
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  get   "/sign_in"          => "volunteer#sign_in"
+  post  "/sign_in_post"     => "volunteer#sign_in_post" 
+  post  "/sign_out"         => "volunteer#sign_out_post"
+  get   "/sign_up"          => "volunteer#sign_up"
+  post  "/sign_up_post"     => "volunteer#sign_up_post"
+  get   "/location"         => "volunteer#location"
   
-  get "/"               => "main#home"
-  get "/sign_in"        => "main#sign_in" 
-  get "/sign_up"        => "main#sign_up"
-  get "/about"          => "main#about"
-  get "/contact_us"     => "main#contact_us"
-  get "/location"       => "main#location"
-  
-  get "/admin"          => "admin#home"
-  
-  
-  
-  
+  get   "/admin"            => "admin#home"
 end
 
 
