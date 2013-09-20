@@ -1,20 +1,16 @@
-<center><h1> Tell us where you are, and where you're headed</h1><br>
-<h3> We will check to see if a pet in need needs a ride to your destination</h3>
+<center><h1> Tell us where you are, and where you're headed</h1> 
+<h3> We will check to see if a pet in need needs a ride to your destination</h3><br>
 </center>
 
 <%== form_tag "/location_post" do %>
 
-<p><h1> <font color="blue">Where are you?</font>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-Where are you going? </h1></p>
-
-<p><%== text_field_tag :location, "City" %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-<%== text_field_tag :location, "City" %><br> 
-<%== text_field_tag :location, "State" %>
-<%== text_field_tag :location, "State" %></p>
-
+<pre><h1> <font color="">Where are you?</font>          Where are you going? </h1></pre>
  
 
-
-<% end %>
-
+<pre>
+  City:   <%== text_field_tag :location, "" %>                             City:  <%== text_field_tag :location, "" %>
+  State:  <%== text_field_tag :location, "" %>                             State: <%== text_field_tag :location, "" %> 
+</pre>
+        <% end %>
+<pre>               or</pre>                                              
 

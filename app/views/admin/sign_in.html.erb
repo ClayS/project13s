@@ -6,11 +6,12 @@
 <h2><center><font color="blue">ADMIN SIGN IN</font></center></h2>
  
 <%== form_tag "/admin/sign_in_post" do %>
+
 <p align="left">
-<h4>Email Address: 
-  <%== text_field_tag :email, "", size: 50 %> </h4>
-<br>
-<h4>Password: 
+<h4> Email Address:  
+  <%== text_field_tag :email, "", size: 40 %> </h4>
+ 
+<h4><font color="">Password: </font>
   <%== password_field_tag :password %></h4>
 <br> 
 </p>
