@@ -1,5 +1,5 @@
  
-<center><h2><font color="orange">CONTACT US</font></h2></center>
+<center><h2><font color="blue">CONTACT US</font></h2></center>
 <div style="color:red"><% if @inquiry != nil %>
         <% @inquiry.errors.full_messages.each do |m| %>
         <%== m %>
@@ -9,13 +9,15 @@
 </div>
 
 
-<%== form_tag "/contact_us_post" do %>
- Name 
-<%== text_field_tag :name, "", size: 60 %><br>
-email address 
-<%== text_field_tag :email, "", size: 60 %><br>
+<h3>
+  <%== form_tag "/contact_us_post" do %>
+   Name <%== text_field_tag :name, "", size: 60 %> <br>
+ 
+  email address 
+  <%== text_field_tag :email, "", size: 60 %><br>
+</h3>
 
 <%== text_area_tag :body, "", rows: 8, cols: 80%>
  <br>
-<%== submit_tag "send" %>
- <% end %>
+ <%== submit_tag "send" %> 
+<% end %>
