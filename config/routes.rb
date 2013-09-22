@@ -18,7 +18,7 @@ Project13::Application.routes.draw do
   post  "/admin/sign_in_post" => "admin#sign_in_post"
   get   "/admin/sign_up"      => "admin#sign_up"
   post  "/admin/sign_up_post" => "admin#sign_up_post"
-  get "/admin/listings"       => "admin#listings"
+  get   "/admin/listings"     => "admin#listings"
 end
 
 
