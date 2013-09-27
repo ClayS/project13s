@@ -9,15 +9,16 @@
 </div>
 
 
-<h3>
-  <%== form_tag "/contact_us_post" do %>
-   Name <%== text_field_tag :name, "", size: 60 %><br>
- 
-  email address 
-  <%== text_field_tag :email, "", size: 60 %><br>
-</h3>
 
-<%== text_area_tag :body, "", rows: 8, cols: 80%>
+  <%== form_tag "/contact_us_post" do %>
+   <h3>Name</h3> <%== text_field_tag :name, "", size: 60 %><br>
+ 
+  <h3>email address</h3> 
+  <%== text_field_tag :email, "", size: 60 %><br>
+
+
+<%== text_area_tag :body, "", rows: 8, cols: 80 %>
  <br>
  <%== submit_tag "send" %> 
 <% end %>
+

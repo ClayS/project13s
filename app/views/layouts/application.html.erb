@@ -7,19 +7,24 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
+     
     <nav>
-      <ul>
+      <ul>  
         <li><a href="/"><button type="Home"><font color="">Home</font></button></a>
         <li><a href="/sign_in"><button type="button">Sign In</button></a>
         <li><a href="/about"><button type="button">About</button></a>
         <li><a href="/contact_us"><button type="button">Contact Us!</button></a>
-        <li><a href="/admin/sign_in"><button type="Home">Admin</button></a>
+        <li><a href="/admin/sign_in"><button type="Home">Admin Sign In</button></a>
         <li><%== form_tag "/sign_out" do %>
               <button type="Sign Out">Sign Out</button>
             <% end %>
+           
       </ul>
-    </nav>
+    </nav> 
     <br>
+     
+    
+     
     <%= yield %>
     
     <br>
@@ -31,6 +36,12 @@
     <br>
     <br>
     <br>
+        <div><% if flash[:error] !=nil %>
+             <%= flash[:error] %>
+             <% end %>
+        </div>
+
+ 
     
     
     

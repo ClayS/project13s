@@ -1,0 +1,51 @@
+<u><center><h1><font color="blue">Animals Needing Transport</font></h1></center></u><br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Breed</th>
+      <th>Special needs</th>
+      <th>Location city</th>
+      <th>Location state</th>
+      <th>Destination city</th>
+      <th>Destination state</th>
+      <th>Contact name</th>
+      <th>Contact phone</th>
+      <th>Contact email</th>
+      <th>Contact affiliation</th>
+      <th>Additional notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animals.each do |animal| %>
+      <tr>
+        <td><%= animal.name %></td>
+        <td><%= animal.age %></td>
+        <td><%= animal.breed %></td>
+        <td><%= animal.special_needs %></td>
+        <td><%= animal.location_city %></td>
+        <td><%= animal.location_state %></td>
+        <td><%= animal.destination_city %></td>
+        <td><%= animal.destination_state %></td>
+        <td><%= animal.contact_name %></td>
+        <td><%= animal.contact_phone %></td>
+        <td><%= animal.contact_email %></td>
+        <td><%= animal.contact_affiliation %></td>
+        <td><%= animal.additional_notes %></td>
+        <td><%= link_to 'Show', animal %></td>
+        <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+        <td><%= link_to 'Remove', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Animal', new_animal_path %>

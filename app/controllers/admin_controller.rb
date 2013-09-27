@@ -5,7 +5,12 @@ class AdminController < ApplicationController
   end
   
   def sign_in_post
-    redirect_to "/admin/listings" and return
+    admin = Admin.where(email_address: params[:email_address]).first
+    if admin != nil && admin.authenticate(params[:password])
+      redirect_to "/animals" and return
+    else
+      render :sign_in
+    end
   end
   
   def listings

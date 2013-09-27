@@ -45,4 +45,9 @@ class VolunteerController < ApplicationController
     render :location
   end
   
+  def location_post
+    @records = Animal.where(location_city: params[:start_city], location_state: params[:start_state], destination_city: params[:end_city], destination_state: params[:end_state])
+    render :location
+  end
+  
 end

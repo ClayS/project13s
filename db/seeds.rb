@@ -7,5 +7,10 @@ Volunteer.create! \
   affiliation: "ASPCA",
   city: "Arvada", 
   state: "CO"
+  
+Admin.create! \
+  email_address: "clayton.sewald@comcast.net",
+  password: "test",
+  password_confirmation: "test"
 
 

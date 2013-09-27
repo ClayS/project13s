@@ -1,12 +1,11 @@
-<div><% if flash[:error] != nil %>
-      <%= flash[:error] %>
-      <% end %>
+<div><% if flash[:error] !=nil %>
+     <%= flash[:error] %>
+     <% end %>
 </div>
 
 <h2><center><font color="light blue">SIGN IN</font></center></h2>
- 
-<%== form_tag "/sign_in_post" do %>
-<p align="left">
+  <%== form_tag "/sign_in_post" do %>
+  <p align="left">
 <h4> Email Address:  
   <%== text_field_tag :email, "", size: 40 %> </h4>
  
@@ -19,6 +18,7 @@
 <%== submit_tag "Sign In" %>
 <% end %>
  
-
-<p><h3>Don't have an account with us? Click <a href="/sign_up"><font color="blue"> here </font></a> to sign up!</h3></p>
+ 
+<p><h3>Don't have an account with us?<br> Click <a href="/sign_up"><font color="blue"> here </font></a> to sign up!</h3></p>
+ 
 
