@@ -1,15 +1,20 @@
+<div><% if flash[:error] != nil %>
+     <%= flash[:error] %>
+     <% end %>
+</div>
+
 <center><h1><font color="blue"> Tell us where you are, and where you're headed</font></h1> 
 <h3><font color="green"> We will check to see if a pet in need needs a ride to your destination</font></h3><br>
 </center>
 
 <%== form_tag "/location_post" do %>
 
-<pre><h1> <font color="">Where are you?</font>          Where are you going? </h1></pre>
+<pre><h1> <font color="">Where are you?</font>    Where are you going? </h1></pre>
  
 
 <pre>
-  City:   <%== text_field_tag :start_city, "" %>                             City:  <%== text_field_tag :end_city, "" %>
-  State:  <%== text_field_tag :start_state, "" %>                             State: <%== text_field_tag :end_state, "" %> 
+   City:   <%== text_field_tag :start_city, "" %>                             City:  <%== text_field_tag :end_city, "" %>
+  State:   <%== text_field_tag :start_state, "" %>                             State: <%== text_field_tag :end_state, "" %> 
 </pre>
 
 <%= submit_tag "Search" %>
@@ -20,5 +25,7 @@
   <p><h3><a href="/animals/<%= r.id %>"><font color="green"><%= r.name %></a></font> could use a lift! </h3> </p>
   <% end %></center>
 <% end %>
+
+
                                             
 

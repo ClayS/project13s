@@ -10,15 +10,15 @@
 
 
 
-  <%== form_tag "/contact_us_post" do %>
+  <p><%== form_tag "/contact_us_post" do %>
    <h3>Name</h3> <%== text_field_tag :name, "", size: 60 %><br>
  
-  <h3>email address</h3> 
+  <h3>Email address</h3> 
   <%== text_field_tag :email, "", size: 60 %><br>
 
-
-<%== text_area_tag :body, "", rows: 8, cols: 80 %>
+  <h3>Message</h3>
+<%== text_area_tag :body, "", rows: 8, cols: 120 %>
  <br>
  <%== submit_tag "send" %> 
-<% end %>
+<% end %></p>
 

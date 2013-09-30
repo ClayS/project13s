@@ -47,7 +47,22 @@ class VolunteerController < ApplicationController
   
   def location_post
     @records = Animal.where(location_city: params[:start_city], location_state: params[:start_state], destination_city: params[:end_city], destination_state: params[:end_state])
-    render :location
+    if @records != Animal.where(location_city: params[:start_city], location_state: params[:start_state], destination_city: params[:end_city], destination_state: params[:end_state])
+       flash[:error] = "No animals in need at this time!"
+       redirect_to "/location"
+    else
+       render :location
+    end
   end
-  
 end
+
+  
+   #def location_post
+     #if @records = Animal.where(location_city: params[:start_city], location_state: params[:start_state], destination_city: params[:end_city], destination_state: params[:end_state])
+        #render :location
+    # else 
+       #flash[:error] = "No animals in need at this time!"
+       #redirect_to "/location"
+     #end
+  #end
+ #end
